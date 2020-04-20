@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    margin: 25px 25px;
+    background-color: darkgray;
+}
+header{
+    width: 600px;
+    background-color:whitesmoke;
+    padding: 20px 20px 0 20px;
+    margin: 0 auto;
+}
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 25px;
+}
+h1::before{
+    content: "";
+    display: block;
+    background-color: black;
+    height: 7px;
+    width: 190px;
+    margin-bottom: 9px;
+}
+h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid black;
+}
+
+form{
+    width: 600px;
+    padding: 20px 20px;
+    background-color: whitesmoke;
+    margin: 0 auto;
+}
+fieldset{
+    border: none;
+    border-bottom: 2px solid black;
+    padding-bottom: 50px;
+}
+label{
+    width: 280px;
+    display: inline-block;
+    padding: 10px 0;
+    color: rgb(105, 96, 96); 
+    font-weight: 600;   
+}
+
+legend {
+    margin-bottom: 40px;
+    padding-top: 10px;
+    font-weight: bold; 
+}
+#personlich {
+    padding-top: 0;
+}
+
+
+div {
+    display: flex;    
+}
+/*#titel ,#vorname ,#nachname ,#tel ,#mobile ,#h_nummer, #fax ,#mail1 ,#mail2 {
+    float: right;
+    border: none;
+    border-bottom: 1px gray solid;
+    width: 300px;
+    height: 20px;}
+   */
+
+.radio-label{
+    display: inline-block;
+    width: 120px;
+    height: 20px;    
+    background: none;
+    color: darkgray;
+    font-size: 14;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    padding: 8px 16px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    transition: all 0.1s ease-in-out;
+    margin-top: 10px;
+}
+::placeholder {
+    color: lightgray;
+    font-style: italic;
+}
+.sprache-label {
+    display: inline-block;
+    width: 70px;
+    height: 20px;    
+    background: none;
+    color: darkgray;
+    font-size: 14;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    padding: 8px 16px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    transition: all 0.1s ease-in-out;
+    margin-top: 10px;
+}
+
+input:not([type="radio"]) {
+    display: inline-block;
+    width: 300px;
+    padding: 7px 0;
+    border: none;
+    border-bottom: 1px solid rgb(177, 176, 176);           
+}
+.radio-input{
+    position: fixed;
+    top: 0;
+    left: 0;
+    clip: rect(0 0 0 0);
+}
+.radio-label:hover {
+    cursor: pointer;
+}
+input:checked + label {
+    background: none;
+    color: rgb(60, 40, 71);
+    border-bottom: 2px solid rgb(47, 88, 52);
+}
+#number, #plz, #kanton {
+    width: 50px;
+    margin-top: 10px;
+    
+}
+#number::placeholder, #plz::placeholder, #kanton::placeholder {
+    color: darkgray;
+    font-style: normal; 
+    font-weight: bold;   
+}
+#land, #ort, #adress {
+    width: 250px;
+}
+#land::placeholder, #ort::placeholder, #adress::placeholder {
+    color: darkgray;
+    font-style: normal; 
+    font-weight: bold;
+}
+#adressdaten {
+    border: none;
+    padding-bottom: 50px;
+}
+input[type="submit"] {
+    display: block;
+    width: 150px;
+    height: 50px;
+    float: right;
+    margin-right: 10px;
+    margin-top: 50px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(21, 44, 6);
+    font-size: 20px;
+    font-family: 'Segoe UI';
+    font-weight: bold;   
+}
+.sprache-label:hover{
+    color: rgb(4, 68, 36);
+    border-bottom: 2px solid darkgreen;
+    cursor: pointer;
+    background-color: darkseagreen;
+}
+.radio-label:hover{
+    color: rgb(4, 68, 36);
+    border-bottom: 2px solid darkgreen;
+    cursor: pointer;
+    background-color: darkseagreen;
+}
+input[type="submit"]:hover{
+    background-color: darkseagreen;
+    cursor: pointer;
+    color: darkslategrey;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    
+    <link rel="stylesheet" href="form3.css">
+</head>
+<body>
+    <header>
+        <h1>Profil</h1>
+        <h3>Hier können Sie ihr Adress-Angaben einsehen und anpassen.</h3>
+    </header>   
+    
+    <form action="form3.html" method="POST">
+        <fieldset id="Daten">
+            <legend id="personlich">Persönliche Daten</legend>
+
+            <label for="titel">Titel</label>
+            <input type="text" name="Titel" id="titel" placeholder="Dr.">
+            <br>
+
+            <label for="vorname">Vorname </label>
+            <input type="text" name="Vorname" id="vorname" placeholder="Delberin">
+            <br>
+            
+            <label for="nachname">Nachname</label>
+            <input type="text" name="Nachname" id="nachname" placeholder="Ali">
+            <br>
+
+            <div>
+                <label for="geschlecht">Geschlecht</label>           
+                <input type="radio" class="radio-input" name="geschlecht"  id="weib" value="Female" checked>
+                <label for="weib" class="radio-label">W</label>
+                <input type= "radio" class="radio-input" name="geschlecht" id="mann" value="Male">
+                <label for="mann" class="radio-label">M</label>
+            </div> 
+            <br>
+
+            <div>
+                <label for="sprache">Sprache</label>
+                <input type="radio" class="radio-input" id="deutch"  name="sprache" value="DE" checked>
+                <label for="deutch" class="sprache-label">DE</label>
+                <input type="radio" class="radio-input" id="french"  name="sprache" value="FR">
+                <label for="french" class="sprache-label">FR</label>
+                <input type="radio" class="radio-input" id="italien"  name="sprache" value="IT">
+                <label for="italien" class="sprache-label">IT</label>
+            </div>
+        </fieldset>
+    
+
+        <fieldset id="kontakt">
+            <legend>Kontaktdaten</legend>
+
+            <label for="tel">Telefon</label>
+            <input type="tel" id="tel" name="telefon" required>
+            <br>
+
+            <label for="mobile">Mobile</label>
+            <input type="tel" id="mobile" name="telefon" placeholder="optional">
+            <br>
+
+            <label for="h_nummer">Hauptnummer</label>
+            <input type="tel" id="h_nummer" name="h_nummer" placeholder="optional">
+            <br>
+
+            <label for="fax">Fax</label>
+            <input type="tel" id="fax" name="fax" placeholder="optional">
+            <br>
+
+            <label for="mail1">Mail 1</label>
+            <input type="email" id="mail1" name="mail1" required>
+            <br>
+
+            <label for="mail2">Mail 2</label>
+            <input type="email" id="mail2" name="mail2" placeholder="optional">  
+
+        </fieldset>
+       
+
+        <fieldset id="adressdaten">
+            <legend>Adressdaten</legend>
+
+            <label for="firma">Firma</label>
+            <input type="text" id="firma" name="firma" required>
+            <br>
+
+            <label for="zusatz_firma">Zusatz Firma</label>
+            <input type="text" name="zusatz_firma" id="zusatz_firma" placeholder="optional">
+            <br>
+
+            <label for="homepage">Homepage</label>
+            <input type="text" id="homepage" name="homepage" placeholder="optional">
+            <br>
+
+            
+            <label for="adresse">Adress/ Haus Nr</label>
+            <input type="text" id="adress" class="adresse" name="adress" placeholder="Musterstrasse">        
+            <input type="number" id="number" class="adresse" name="number" placeholder="33" required>
+            <br>
+
+            <label for="zusatz_adress">Zusatz Adress</label>
+            <input type="text" id="zusatz_adress" name="zusatz_adress" placeholder="optional">
+            <br>
+
+            <label for="postfach">Postfach</label>
+            <input type="text" id="postfach" name="postfach" placeholder="optional">
+            <br>
+
+            <label for="post-code">PLZ / Ort</label>
+            <input type="number" id="plz" class="post-code" name="plz" placeholder="8800" required>
+            <input type="text" id="ort" class="post-code" name="ort"  placeholder="Musterstadt" required>
+            <br>
+          
+            <label for="kanton">Kanton /Land</label>
+            <input type="text" id="kanton"  name="kanton" placeholder="ZH" required>
+            <input type="text" id="land"  name="land" placeholder="Schweiz" required>
+            <br>
+
+            <input type="submit" value="Speichern">  
+        </fieldset>
+    </form>  
+</body>
+</html>

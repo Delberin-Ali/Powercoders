@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil form</title>
+    <link rel="stylesheet" href="CSS/form.css">
+</head>
+<body>
+    <header>
+        <h1>Profil</h1>
+        <h3>Hier können Sie ihr Adress-Angaben einsehen und anpassen.</h3>
+        <hr>
+    </header>
+    <main>
+            <form action="form.html" method="POST">
+                <fieldset id="Daten">
+
+                    <legend>Persönliche Daten</legend>
+                    <div>
+                        <label for="titel" class="radio" >Titel</label>
+                        <input type="text" name="Titel" id="titel" placeholder="Dr.hc">                        
+                    </div> 
+
+                    <div>
+                        <label for="vorname" >Vorname </label>
+                        <input type="text" name="vorname" id="vorname">                        
+                    </div>
+
+                    <div>
+                        <label for="nachname">Nachname</label>
+                        <input type="text" name="nachname" id="nachname">
+                    </div>
+
+                    <div>
+                       <label>Geschlecht</label>  
+                        <input type="radio" id="weiblich" name="geschlecht" value="W" checked/>
+                        <label for="weiblich">W</label>
+
+                        <input type="radio" id="männlich" name="geschlecht" value="M" />
+                        <label for="männlich">M</label>
+                    </div>
+
+                    <div>
+                       <label> Sprache</label>
+                        <input type="radio" id="deutch" name="sprache" value="DE" checked/>
+                        <label for="deutch">DE</label>
+
+                        <input type="radio" id="french" name="sprache" value="FR"/>
+                        <label for="french">FR</label>
+
+                        <input type="radio" id="italien" name="sprache" value="IT"/>
+                        <label for="italien">IT</label>
+                    </div>
+                </fieldset>
+                <hr>
+                <fieldset id="kontakt">
+                    <legend>Kontaktdaten</legend>
+                    <div>
+                        <label for="tel">Telefon</label>
+                        <input type="tel" id="tel" name="telefon" required>                        
+                    </div>
+
+                    <div>
+                        <label for="mobile">Mobile</label>
+                        <input type="tel" id="mobile" name="telefon" placeholder="optional">
+                    </div>
+
+                    <div>
+                        <label for="h_nummer">Hauptnummer</label>
+                        <input type="tel" id="h_nummer" name="h_nummer" placeholder="optional">
+                    </div>
+
+                    <div>
+                        <label for="fax">Fax</label>
+                        <input type="tel" id="fax" name="fax" placeholder="optional">
+                    </div>
+
+                    <div>
+                        <label for="mail1">Mail 1</label>
+                        <input type="email" id="mail1" name="mail1" required>
+                    </div>
+
+                    <div>
+                        <label for="mail2">Mail 2</label>
+                        <input type="email" id="mail2" name="mail2" placeholder="optional">  
+                    </div>
+                </fieldset>
+                <hr>
+                <fieldset id="adressdaten">
+
+                    <legend>Adressdaten</legend>
+                    <div>
+                        <label for="firma">Firma</label>
+                        <input type="text" id="firma" name="firma" required>
+                    </div>
+
+                    <div>
+                        <label for="zusatz_firma">Zusatz Firma</label>
+                        <input type="text" name="zusatz_firma" id="zusatz_firma" placeholder="optional">                    
+                    </div>
+
+                    <div>
+                        <label for="homepage">Homepage</label>
+                        <input type="text" id="homepage" name="homepage" placeholder="optional">                        
+                    </div>
+
+                    <div>
+                        <label for="adress">Adress</label> <label for="number">/Haus Nr</label>
+                        <input type="text" id="adress" name="adress" placeholder="Musterstrasse">        
+                        <input type="number" id="number" name="number" placeholder="33" required>                   
+                    </div>
+
+                    <div>
+                        <label for="zusatz_adress">Zusatz Adress</label>
+                        <input type="text" id="zusatz_adress" name="zusatz_adress" placeholder="optional">                    
+                    </div>
+
+                    <div>
+                        <label for="postfach">Postfach</label>
+                        <input type="text" id="postfach" name="postfach" placeholder="optional">                    
+                    </div>
+
+                    <div>
+                        <label for="plz">PLZ</label>  <label for="ort">/ Ort</label>
+                        <input type="number" id="plz" name="plz" placeholder="8800" required>
+                        <input type="text" id="ort" name="ort"  placeholder="Musterstadt" required>                    
+                    </div>
+
+                    <div>
+                        <label for="kanton">Kanton</label> <label for="land">/ Land </label>
+                        <input type="text" id="kanton" name="kanton" placeholder="ZH" required>
+                        <input type="text" id="land" name="land" placeholder="Schweiz" required>                    
+                    </div>
+
+                    <div>
+                        <input type="submit" value="Speichern">
+                    </div>
+
+                </fieldset>
+        </form>
+    </main>   
+</body>
+</html>

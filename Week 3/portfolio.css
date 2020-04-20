@@ -1,0 +1,105 @@
+
+* { box-sizing: border-box; }
+
+body {
+  background:black;
+  color:lightgray;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.45;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.sidebar {
+  background:gray ;
+  flex: 1 1 20%;
+  min-width: 300px;
+  padding: 3em;
+}
+
+.logo {
+  text-transform: uppercase;
+  margin-bottom: 2em;
+  
+  @media (min-width: 1500px) {
+    margin-bottom: 5em;
+  
+  span {
+    font-weight: bold;
+  }
+}}
+
+.nav-item {
+        color: rgb(66, 71, 77);
+        text-decoration: none;
+        font-size: 1.7rem;
+        display: inline-block;
+        margin-right: 2em;
+        @media (min-width: 1500px) {
+          display: block;
+          margin: 7vh 0;
+        }
+    }
+  
+  
+
+
+.main-content {
+  padding: 10%;
+  flex: 1 1 80%;
+  min-height: 100vh;
+
+}
+
+
+
+
+.portfolio {
+  display: grid;
+  height: 100%;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+}
+
+.portfolio-item {
+  background: rgb(207, 129, 129);
+  color: lightgray;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  background-size: cover;
+  background-position: top left;
+  transition: all ease-in-out 300ms;
+  position: relative;
+  z-index: 10;
+
+}  
+.small {
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+  
+  .medium {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+  
+  .large {
+    grid-row: span 3;
+    grid-column: span 3;
+  }
+  
+  .tall {
+    grid-row: span 3;
+    grid-column: span 2;
+  }
+  
+  .wide {
+    grid-row: span 2;
+    grid-column: span 3;
+  }

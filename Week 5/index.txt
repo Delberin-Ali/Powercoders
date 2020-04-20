@@ -1,0 +1,45 @@
+input:
+======
+(age, current year, retirement age)
+
+ //retirement year,  years left// we are not sure about these if they are input or not !!!!
+
+
+
+the process:
+===========
+
+
+yearLeft = retirementAge - age;
+retirementYear = currentYear + yearLeft;
+  
+start:
+=======
+
+initialize age = 0;
+initialize current year =0;
+initialize retirement age =0;
+initialize retirement year = 0;
+initialize years left =0;
+
+
+
+prompt ("what is your age?")
+prompt ("At what age you wanna retire ?")
+
+validation :
+============
+if age is  not a number: prompt("please enter your age as a number)
+
+if retirement age not a number: prompt("please enter your retirement age as a number)
+
+
+
+output:
+======
+
+yearsLeft + "until  you will be  retired"
+"you will be retired in" + retirementYear
+
+End
+==== 
