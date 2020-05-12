@@ -1,48 +1,85 @@
-/* Tip Calculater
-initialize billAmount to 0
-initialize tip to 0
-initialize tipRate to 0
-initialize total to 0
-*/
 
-/*  
-we have to 2 inputs:
-    -bill amount
-    -tip rate
-and we have 2 outputs:
-    -tip 
-    -total
+// Change the code of your tip calculator to use the DOM
+// add input fields
+// add event listeners
+// add the result to the DOM
 
-we have to prompt the values now e.g. :
-prompt for bill amount will be "what is the bill amount ?"
-prompt for tip rate will be " what is the tip rate ?"
-
-and we have to convert them to Numbers 
--convert bill amount to Number
--convert tip rate to Number
-
-*/ 
+ 
 
 
-/*var billAmount = Number(prompt("what is the bill Amount ?"))
-var tipRate = Number(prompt("what is the tip rate ?"))
 
-tip = billAmount * (tipRate/100)
-total = billAmount + tip 
+let billAmount = document.getElementById("billAmount");
+let TipRate= document.getElementById("TipRate");
+let excludeVAT= document.getElementById("excludeVAT");
+
+billAmount.addEventListener("input", TipCalculator);
+TipRate.addEventListener("input", TipCalculator);
+excludeVAT.addEventListener("input", TipCalculator);
+function TipCalculator(){
+    if(excludeVAT > 0){
+        billAmountExVAT = billAmount - (billAmount * excludeVAT / 100);
+        tip = billAmountExVAT * tipRate / 100;
+    } else {
+        tip = billAmount * tipRate / 100;
+    }
+    
+    tip = (Math.ceil(tip*20)/20);
+    totalAmount = (Math.ceil((billAmount + tip)*20)/20);
+}
 
 
-document.write(" The Tip is  CHF  " + tip);
-document.write(" The Total is CHF " + total);*/
+// tipRate = prompt("Please enter the tip rate as number, e.g. 15 for 15%");
+// excludeVAT = prompt("Please enter the VAT as number if you want to exclude it, e.g. 18 for 18%");
 
-var tip1 =[ "HTML", "CSS"];
-var tip2=[ "JS", "PHP"];
+// if(billAmount==""){
+//     billAmount = prompt("Please enter your bill amount as number, e.g. 230.50");
+// }
+// if(tipRate==""){
+//     tipRate = prompt("Please enter the tip rate as number, e.g. 15 for 15%");
+// }
+// if(excludeVAT==""){
+//     excludeVAT = 0;
+// }
 
-var tip =tip1.concat(tip2);
+// billAmount = parseFloat(Math.ceil(billAmount*20)/20);
+// tipRate = parseFloat(tipRate);
+// excludeVAT = parseFloat(excludeVAT);
 
-//tip.push("AAA");
-//tip.pop();
-//tip.shift();
-//tip.sort();
+if(isNaN(billAmount)){
+    billAmount = prompt("Please enter your bill amount as number, e.g. 230.50");
+    billAmount = parseFloat(Math.ceil(billAmount*20)/20);
+}
+if(isNaN(tipRate)){
+    tipRate = prompt("Please enter the tip rate as number, e.g. 15 for 15%");
+    tipRate = parseFloat(tipRate);
+}
+if(isNaN(excludeVAT)){
+    excludeVAT = prompt("Please enter the VAT as number if you want to exclude it, e.g. 18 for 18%");
+    excludeVAT = parseFloat(excludeVAT);
+}
 
+// //debug
+// console.log(billAmount);
+// console.log(tipRate);
+// console.log(excludeVAT);
 
-console.log(tip);
+// if(excludeVAT > 0){
+//     billAmountExVAT = billAmount - (billAmount * excludeVAT / 100);
+//     tip = billAmountExVAT * tipRate / 100;
+// } else {
+//     tip = billAmount * tipRate / 100;
+// }
+
+// tip = (Math.ceil(tip*20)/20);
+// totalAmount = (Math.ceil((billAmount + tip)*20)/20);
+
+// //debug
+// console.log(tip);
+// console.log(totalAmount);
+
+// document.write("Your bill amount is CHF "+billAmount.toFixed(2)+"<br>");
+// document.write("Your tip rate is "+tipRate.toFixed(2)+"%<br>");
+// if(excludeVAT>0){
+//     document.write("You want to exlude the VAT of "+excludeVAT.toFixed(2)+"%<br>");
+// }
+// document.write("You pay a total of CHF "+totalAmount.toFixed(2)+" with a tip of CHF "+tip.toFixed(2));
